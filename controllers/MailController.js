@@ -40,7 +40,7 @@ exports.sendEmail = async (req, res, next) => {
         <div> 
         <p>Hola ${user.name}</p> 
         <p>Si solicitaste Restablecer tu contraseña ingresa al link:</p> 
-        <a href="http://localhost:3000/resetpassword/${token}">Aqui</a> 
+        <a href="${process.env.FRONTEND_URL}/resetpassword/${token}">Aqui</a> 
         <p>De lo contrario ignora el Correo</p> 
 
         </div> 
