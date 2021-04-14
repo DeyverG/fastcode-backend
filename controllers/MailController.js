@@ -50,7 +50,7 @@ exports.sendEmail = async (req, res, next) => {
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
             console.log(error);
-            res.send(500, err.message);
+            res.send(500, error.message);
         } else {
             console.log("Email sent");
             res.json({msg: "Se a enviado un correo de restablecimiento"});
